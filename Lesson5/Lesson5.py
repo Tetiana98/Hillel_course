@@ -15,6 +15,30 @@ try:
 except Exception as e:
     print("Error: ", e)
 
+#Task3
+while True:
+    formula = input('Enter formula: ')
+    try:
+        values = formula.split()
+        if len(values) != 3:
+            raise ValueError('Formula must contain 3 elements')
+        number_1 = float(values[0])
+        number_2 = float(values[2])
+        if values[1] not in ['+', '-']:
+            raise ValueError('Wrong operator. Only + and - are allowed in this formula ')
+        operation = values[1]
+    except ValueError as error:
+        print(f'Error: {error}')
+    else:
+        break
+if operation == '+':
+    result = number_1 + number_2
+else:
+    result = number_1 - number_2
+print(f'Result: {result}')
+
+
+
 
 
 
