@@ -17,8 +17,6 @@ def max_women_from_1977():
     print('Number of women born after 1977:', max_count)
 
 # Task2
-import json
-
 def find_the_most_successful_manager():
     with open('manager_sales.json') as file:
         data = json.load(file)
